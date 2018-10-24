@@ -1,0 +1,9 @@
+body {
+  padding-top: 50px;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+.js-search-results {
+  width: 100%;
+}

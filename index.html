@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title>Recipe inspiration</title>
-        <script
-          src="https://code.jquery.com/jquery-3.2.1.min.js"
-          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-          crossorigin="anonymous"></script>
-        <link href="index.css" rel="stylesheet" type="text/css" />
-    </head>
-    <body>
-      <div class="background-container">
-        <header role="banner">
-            <h1>Need a recipe?</h1>
-            <p class="intro-copy">Can't decide what to make for dinner and you only have a few ingredients? Need some inspiration? Enter those ingredients in the search box below and we'll provide some ideas. For the best results, enter 3 ingredients starting with the one you have the most of or that is most important in your dish and prepare to be inspired.</p>
-            <p class="intro-copy">For those of us that might be vegan, vegeterian or gluten free you'll be able to check right away if this recipe is OK for you by clicking the Health Awareness button below the recipe image in the search results.</p>
-          </header>      
-          <form action="#" class="js-search-form" role="search">
-              <fieldset>
-                <legend>Recipe inspiration search input</legend>
-                <label for="query"></label>
-                <p>I have these ingredients to work with:</p>
-                <input type="text" class="js-query" placeholder="Enter 3 ingredients" aria-label="recipe search input" required>
-                <input type="button" class="js-search-button" value="Search">
-              </fieldset>
-            </form>
-          <main role="main">
-            <section class="js-search-results" aria-live="assertive">
-            </section>
-          </main>        
-      </div>
-    <script src="index.js"></script>
-    </body>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>Recipe inspiration</title>
+      <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+      <link href="index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="background-container">
+      <header role="banner">
+          <h1>Need a recipe?</h1>
+          <p class="intro-copy">Can't decide what to make for dinner and you only have a few ingredients? Need some inspiration? Enter those ingredients in the search box below and we'll provide some ideas. For the best results, enter 3 ingredients starting with the one you have the most of or that is most important in your dish and prepare to be inspired.</p>
+          <p class="intro-copy">For those of us that might be vegan, vegetarian or gluten free you'll be able to check right away if this recipe is OK for you by clicking the Health Awareness button below the recipe image in the search results.</p>
+      </header>      
+      <form action="#" class="js-search-form" role="search">
+        <fieldset>
+          <legend>Recipe inspiration search input</legend>
+          <label for="query"></label>
+          <p>I have these ingredients to work with:</p>
+          <input type="text" class="js-query" placeholder="Enter 3 ingredients" aria-label="recipe search input" required>
+          <input type="button" class="js-search-button" value="Search">
+        </fieldset>
+      </form>
+      <main role="main">
+        <section class="js-search-results" aria-live="assertive">
+        </section>
+      </main>        
+    </div>
+  <script src="index.js"></script>
+  </body>
 </html>

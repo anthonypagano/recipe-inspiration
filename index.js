@@ -22,6 +22,9 @@ function getDataFromApi(searchTerm, callback) {
     dataType: 'json',
     type: 'GET',
     success: callback,
+    error: function(){
+      displayErrorMessage();
+    },    
     beforeSend: function(xhr) {
     xhr.setRequestHeader("X-Mashape-Key", "HUIGKzUSuimshYq2Ik0AtYnAWLGIp1v98GXjsnQq7t3xOWZ7Pu");}
   };
@@ -48,6 +51,14 @@ function renderResult(result) {
   `;
 }
 
+//Error message gets called if the main API response comes back with an error
+function displayErrorMessage() {
+  const errorMessage = `
+      <p><a href="https://spoonacular.com/recipes" target="_blank" class="recipe-title">We're sorry, we are experiencing technical difficulties.<br>Please try your search on our parent site Spoonacular.com!</a></p>  
+  `
+  $('.js-search-results').html(errorMessage);
+}
+
 //Watches for a click on the search button and take users ingredients and feed them to the main api function
 function watchSubmit() {
   $('.js-search-form').click(event => {
@@ -60,7 +71,7 @@ function watchSubmit() {
 
 $(watchSubmit);
 
-//Takes each search results id and return the nutrition info so users can check if the returned recipe is vegan, vegeterian and-or gluten free
+//Takes each search results id and return the nutrition info so users can check if the returned recipe is vegan, vegetarian and-or gluten free
 function getNutritionData(recipeId, callback) {
   const nutritionInfo = {
     url: getRecipeNutritionURL(recipeId),
@@ -86,11 +97,11 @@ function displayNutritionInfo(recipeId, healthCheck) {
   $('.js-nutrition-results-' + recipeId).html(results);
 }
 
-//Looks at array and determine true-false values for vegan, vegeterian, gluten free, none of the above or all of the above answers 
+//Looks at array and determine true-false values for vegan, vegetarian, gluten free, none of the above or all of the above answers 
 function renderNutrition(result) {
     if (result[0] == true) {
       return `
-        <h2 class="veganveg">&#x2713;&nbsp;This recipe is Vegeterian</h2>
+        <h2 class="veganveg">&#x2713;&nbsp;This recipe is Vegetarian</h2>
       `;
     }
     if (result[1] == true) {
@@ -105,12 +116,12 @@ function renderNutrition(result) {
     }    
     if (result[0] == false && result[1] == false && result[2] == false) {
       return `
-        <h2 class="unhealthy">&#xd7;&nbsp;I'm sorry, this recipe is not Vegeterian, Vegan, or Gluten Free</h2>
+        <h2 class="unhealthy">&#xd7;&nbsp;This recipe is not Vegetarian, Vegan, or Gluten Free</h2>
       `;
     }
     if (result[0] == true && result[1] == true && result[2] == true) {
       return `
-        <h2 class="veganveg">&#x2713;&nbsp;This recipe IS Vegeterian, Vegan, AND Gluten Free</h2>
+        <h2 class="veganveg">&#x2713;&nbsp;This recipe IS Vegetarian, Vegan, AND Gluten Free</h2>
     `;
   }    
 }

@@ -5,7 +5,7 @@ const RECIPE_API_URL = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.c
 
 //additional nutrition related endpoint
 function getRecipeNutritionURL(recipeId) {
-  return `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/${recipeId}/information`;
+  return 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/${recipeId}/information';
 }
 
 //Returns data from the api based on ingredients entered by the user and other params
@@ -16,7 +16,7 @@ function getDataFromApi(searchTerm, callback) {
         fillIngredients: false,
         ingredients: `${searchTerm}`,
         limitLicense: false,
-        number: 6,
+        number: 1,
         ranking: 1      
     },
     dataType: 'json',
@@ -69,7 +69,9 @@ function watchSubmit() {
   });
 }
 
-$(watchSubmit);
+$(document).ready(
+  watchSubmit()
+);
 
 //Takes each search results id and return the nutrition info so users can check if the returned recipe is vegan, vegetarian and-or gluten free
 function getNutritionData(recipeId, callback) {

@@ -16,7 +16,7 @@ function getDataFromApi(searchTerm, callback) {
         fillIngredients: false,
         ingredients: `${searchTerm}`,
         limitLicense: false,
-        number: 1,
+        number: 6,
         ranking: 1      
     },
     dataType: 'json',

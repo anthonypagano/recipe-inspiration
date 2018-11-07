@@ -54,15 +54,6 @@ h2 {
   color: #FFF
 }
 
-form {
-  padding: 20px 0;
-}
-
-.form-ingredients {
-  font-size: 18px;
-  line-height: 22px;
-}
-
 main {
   width: 100%;
   margin: 0px auto;
@@ -103,6 +94,7 @@ legend {
 .recipe-tile {
   width: 33%;
   display: inline-block;
+  margin: 20px 0 0 0;
 }
 
 .recipe-title {

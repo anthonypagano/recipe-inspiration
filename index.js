@@ -5,7 +5,7 @@ const RECIPE_API_URL = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.c
 
 //additional nutrition related endpoint
 function getRecipeNutritionURL(recipeId) {
-  return 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/${recipeId}/information';
+  return `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/${recipeId}/information`;
 }
 
 //Returns data from the api based on ingredients entered by the user and other params
@@ -99,7 +99,7 @@ function displayNutritionInfo(recipeId, healthCheck) {
   $('.js-nutrition-results-' + recipeId).html(results);
 }
 
-//Looks at array and determine true-false values for vegan, vegetarian, gluten free, none of the above or all of the above answers 
+//Looks at array and determines true-false values for vegan, vegetarian, gluten free, none of the above or all of the above answers 
 function renderNutrition(result) {
     if (result[0] == true) {
       return `
@@ -118,7 +118,7 @@ function renderNutrition(result) {
     }    
     if (result[0] == false && result[1] == false && result[2] == false) {
       return `
-        <h2 class="unhealthy">&#xd7;&nbsp;This recipe is not Vegetarian, Vegan, or Gluten Free</h2>
+        <h2 class="unhealthy">This recipe is not Vegetarian, Vegan, or Gluten Free</h2>
       `;
     }
     if (result[0] == true && result[1] == true && result[2] == true) {

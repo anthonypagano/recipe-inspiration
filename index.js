@@ -43,7 +43,7 @@ function renderResult(result) {
   return `
   <div class="recipe-tile">
     <p><a href="https://spoonacular.com/recipes/${result.title}-${result.id}" target="_blank" class="recipe-title">${result.title}</a></p>
-    <p><a href="https://spoonacular.com/recipes/${result.title}-${result.id}" target="_blank"><img src="${result.image}" alt="${result.title}" class="recipe-image" /></a></p>
+    <p><a href="https://spoonacular.com/recipes/${result.title}-${result.id}" target="_blank"><img src="${result.image}" alt="Image of ${result.title}" class="recipe-image" /></a></p>
     <input type="button" value="Health Awareness" id="${result.id}" class="nutrition-button" onClick="handleOnClickNutritionButton(${result.id})">
     <section class="js-nutrition-results-${result.id}" aria-live="assertive">
     </section>

@@ -12,7 +12,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: #FFF;
+  color: #FFFFFF;
 }
 
 header {
@@ -35,7 +35,7 @@ h2 {
   font-size: 16px;
   width: 225px;
   text-align: center;
-  margin: 0 auto 30px auto
+  margin: 0 auto 30px auto;
 }
 
 .veganveg {
@@ -43,7 +43,7 @@ h2 {
   padding: 10px;
   border: 0;
   border-radius: 10px;
-  color: #FFF
+  color: #FFFFFF;
 }
 
 .unhealthy {
@@ -51,7 +51,7 @@ h2 {
   padding: 10px;
   border: 0;
   border-radius: 10px;
-  color: #FFF
+  color: #FFFFFF;
 }
 
 main {
@@ -104,7 +104,7 @@ legend {
 }
 
 a.recipe-title {
-  color: #FFF;
+  color: #FFFFFF;
 }
 
 a.recipe-title:hover {
@@ -114,7 +114,7 @@ a.recipe-title:hover {
 .recipe-image {
   width: 200px;
   height: 133px;
-  border: 1px solid black;
+  border: 1px solid #000000;
   margin: 15px 0;
 }
 

@@ -15,13 +15,12 @@
       <h1>Recipe Inspiration</h1>
       <p class="intro-copy">Not sure what to make for dinner and you only have a few ingredients? Enter 3 ingredients in the search box below and we'll provide some ideas. Click the Health Awareness button below the recipe image in the search results to see if the recipe is vegan, vegetarian or gluten free.</p>
   </header>      
-  <main role="main">
-    <p class="intro-copy">I have these ingredients to work with:</p>    
+  <main role="main">   
     <form action="#" class="js-search-form" role="search">
       <fieldset>
         <legend>Recipe inspiration search input</legend>
-        <label for="query"></label>
-        <input type="text" class="js-query" placeholder="Enter your ingredients" value="salt pepper lemon" aria-label="recipe search input" required>
+        <label for="ingredients">I have these ingredients to work with:</label>
+        <input type="text" class="js-query" id="ingredients" placeholder="Enter your ingredients" value="salt pepper lemon" aria-label="recipe search input" required>
         <input type="button" class="js-search-button" value="Search">
       </fieldset>
     </form>    

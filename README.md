@@ -5,10 +5,7 @@ This app serves to provide some recipe inspiration using the Spoonacular API. Th
 [Live Demo](https://anthonypagano.github.io/recipe-inspiration/)
 
 ## Screenshots
-Landing Page<br>
-![landing page](screenshots/recipe-inspiration-landing.png)
-
-Search Results
+Landing Page & Search Results
 ![search_results](screenshots/recipe-inspiration-results.png)
 
 Nutrition Awareness Results

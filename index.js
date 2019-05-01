@@ -32,6 +32,12 @@ function getDataFromApi(searchTerm, callback) {
   $.ajax(settings);
 }
 
+//Calls getDataFromApi on load to pre-populate page
+$(window).on('load', function() {
+  const query = "salt pepper lemon";
+  getDataFromApi(query, displayRecipeSearchData);
+});
+
 //Takes formatted search results and populate them on screen for the user
 function displayRecipeSearchData(data) {
   const results = data.map((item, index) => renderResult(item));

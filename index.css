@@ -21,6 +21,28 @@ header {
   text-align: center;
 }
 
+.logo {
+  width: 200px;
+  border-radius: 90px;
+}
+
+.header {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.header li {
+  display: inline-block;
+}
+
 .intro-copy {
   font-size: 18px;
   margin-top: 20px;
@@ -28,7 +50,8 @@ header {
 }
 
 h1 {
-  padding: 20px 0 0 0;
+  font-size: 60px;
+  text-align: left;
 }
 
 h2 {
@@ -138,6 +161,23 @@ a.recipe-title:hover {
 }
 
 @media only screen and (max-width: 650px) {
+  .logo {
+    width: 100px;
+  }
+
+  h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .header li {
+    display: block;
+  }
+
+  .header-breaks {
+    display: none;
+  }
+  
   .recipe-tile {
     width: 100%;
   }

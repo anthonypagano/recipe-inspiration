@@ -1,11 +1,11 @@
 'use strict';
 
 //main recipe api
-const RECIPE_API_URL = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients';
+const RECIPE_API_URL = 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients';
 
 //additional nutrition related endpoint
 function getRecipeNutritionURL(recipeId) {
-  return `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/${recipeId}/information`;
+  return `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/${recipeId}/information`;
 }
 
 //Returns data from the api based on ingredients entered by the user and other params
@@ -13,7 +13,6 @@ function getDataFromApi(searchTerm, callback) {
   const settings = {
     url: RECIPE_API_URL,
     data: {
-        fillIngredients: false,
         ingredients: `${searchTerm}`,
         limitLicense: false,
         number: 6,
@@ -26,7 +25,7 @@ function getDataFromApi(searchTerm, callback) {
       displayErrorMessage();
     },    
     beforeSend: function(xhr) {
-    xhr.setRequestHeader("X-Mashape-Key", "HUIGKzUSuimshYq2Ik0AtYnAWLGIp1v98GXjsnQq7t3xOWZ7Pu");}
+    xhr.setRequestHeader("x-rapidapi-key", "5OwL4zKjcQmshdc2qr09G6IUI239p1e9ko6jsn3hlzc9RPzdH4");}
   };
 
   $.ajax(settings);
@@ -34,7 +33,7 @@ function getDataFromApi(searchTerm, callback) {
 
 //Calls getDataFromApi on load to pre-populate page
 $(window).on('load', function() {
-  const query = "salt pepper lemon";
+  const query = "garlic,basil,chicken";
   getDataFromApi(query, displayRecipeSearchData);
 });
 
@@ -93,7 +92,7 @@ function getNutritionData(recipeId, callback) {
       callback(recipeId, healthCheck); 
     },
     beforeSend: function(xhr) {
-    xhr.setRequestHeader("X-Mashape-Key", "HUIGKzUSuimshYq2Ik0AtYnAWLGIp1v98GXjsnQq7t3xOWZ7Pu");}
+    xhr.setRequestHeader("x-rapidapi-key", "5OwL4zKjcQmshdc2qr09G6IUI239p1e9ko6jsn3hlzc9RPzdH4");}
   };
 
   $.ajax(nutritionInfo);
